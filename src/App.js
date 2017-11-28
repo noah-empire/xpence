@@ -1,18 +1,46 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import Row from './Row.js';
+import SheetEditor from './SheetEditor.js';
 import './App.css';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {rows:[<Row key="0"/>]};
+    this.addRow = this.addRow.bind(this);
+  }
+
+    addRow(ev){
+      let index = (1 + this.state.rows.length).toString();
+      let newState = this.state.rows.slice();
+      newState.push(<Row key={index}/>);
+
+      this.setState({rows: newState});
+
+      console.log('ADD ROW!!!!', newState);
+    }
+
+    renderRows(rowData){
+      console.log('RENDERING ROWS', rowData);
+      return(
+        <div>
+        {rowData}
+        </div>
+      );
+    }
+
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+    return(
+      <div id="container">
+      <form>
+
+      {this.renderRows(this.state.rows)}
+
+      <button type="button" onClick={this.addRow}>
+      Add row
+      </button>
+      </form>
       </div>
     );
   }
