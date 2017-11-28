@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { DollarInput, TextInput } from './CustomInput.js';
-import XLSX from 'xlsx';
 
 class Row extends Component{
   constructor(props){
