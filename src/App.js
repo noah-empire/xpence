@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import Row from './Row.js';
-import SheetEditor from './SheetEditor.js';
-import './App.css';
+import Row from './components/Row.js';
+import SheetEditor from './components/SheetEditor.js';
+import './App.scss';
 
 class App extends Component {
   constructor(props){
