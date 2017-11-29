@@ -24,9 +24,7 @@ class App extends Component {
   renderRows(rowData){
     console.log('RENDERING ROWS', rowData);
     return(
-      <div>
-      {rowData}
-      </div>
+      rowData
     );
   }
 
