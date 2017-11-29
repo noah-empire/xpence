@@ -20,7 +20,6 @@ class TextInput extends Component {
       {/*{this.props.name}<br/>*/}
       {/*{this.state.value}*/}
       {/*</h1>*/}
-
       <input type={this.props.type} value={this.state.value} className={'form-control'} onChange={this.handleChange} />
       </div>
     );
@@ -31,7 +30,6 @@ class DollarInput extends Component{
   constructor(props){
     super(props);
     this.state={value:''};
-
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -40,9 +38,10 @@ class DollarInput extends Component{
       value:ev.target.value,
     });
   }
+
   render(){
     return(
-      <div class="form-group">
+      <div>
       {/*<h1>*/}
       {/*{this.props.name}<br/>*/}
       {/*{this.state.value}*/}

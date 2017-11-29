@@ -22,22 +22,12 @@ class Row extends Component{
   }
   render(){
     return(
-      <table className={'table table-responsive'}>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Description</th>
-            <th>Amount</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr className={'data-row'}>
-            <td><TextInput type={'date'} name='Date' /></td>
-            <td><TextInput type={'text'} name='Description of expenses' /></td>
-            <td><DollarInput name='Amount (CAD$)' /></td>
-          </tr>
-        </tbody>
-      </table>
+      <tr className={'data-row'}>
+        <td><TextInput type={'date'} name='Date' /></td>
+        <td><TextInput type={'text'} name='Description of expenses' /></td>
+        <td><DollarInput name='Amount (CAD$)' /></td>
+        <td></td>
+      </tr>
     );
   }
 }

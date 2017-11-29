@@ -33,11 +33,24 @@ class App extends Component {
   render() {
     return(
       <div id="container">
-      <form>
-      {this.renderRows(this.state.rows)}
-        <button type="button" onClick={this.addRow}>
-        Add row
-        </button>
+        <form>
+        <table className={'table table-responsive'}>
+          <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+            {this.renderRows(this.state.rows)}
+          </tbody>
+        </table>
+
+      <button type="button" onClick={this.addRow}>
+      Add row
+      </button>
       </form>
       </div>
     );
