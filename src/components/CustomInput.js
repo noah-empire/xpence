@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class TextInput extends Component{
+class TextInput extends Component {
   constructor(props){
     super(props);
     this.state={value:''};
@@ -16,15 +16,12 @@ class TextInput extends Component{
   render(){
     return(
       <div>
-      <h1>
-      {this.props.name}<br/>
-      {this.state.value}
-      </h1>
+      {/*<h1>*/}
+      {/*{this.props.name}<br/>*/}
+      {/*{this.state.value}*/}
+      {/*</h1>*/}
 
-      <label>
-      {this.props.name}
-      <input type="text" value={this.state.value} onChange={this.handleChange} />
-      </label>
+      <input type={this.props.type} value={this.state.value} className={'form-control'} onChange={this.handleChange} />
       </div>
     );
   }
@@ -45,16 +42,12 @@ class DollarInput extends Component{
   }
   render(){
     return(
-      <div>
-      <h1>
-      {this.props.name}<br/>
-      {this.state.value}
-      </h1>
-
-      <label>
-      {this.props.name}
-      <input type="number" step='0.01' value='0.00' placeholder='0.00' value={this.state.value} onChange={this.handleChange} />
-      </label>
+      <div class="form-group">
+      {/*<h1>*/}
+      {/*{this.props.name}<br/>*/}
+      {/*{this.state.value}*/}
+      {/*</h1>*/}
+      <input type="number" step='0.01' placeholder='0.00' className={'form-control'} value={this.state.value} onChange={this.handleChange} />
       </div>
     );
   }
